@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,8 +25,8 @@ import java.util.concurrent.TimeUnit;
 
 public class VerifyPhoneNo extends AppCompatActivity {
 
-    Button verify;
-    EditText otp;
+    ImageButton verify;
+    TextInputLayout otp;
     String verificationCodeBySystem;
 
     @Override
@@ -43,7 +45,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String code = otp.getText().toString();
+                String code = otp.getEditText().getText().toString();
 
                 if (code.isEmpty() || code.length() < 6) {
                     otp.setError("Wrong OTP...");

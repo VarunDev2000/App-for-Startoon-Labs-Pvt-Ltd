@@ -1,32 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerifyPhoneNo">
+    tools:context=".VerifyPhoneNo"
+    android:orientation="vertical"
+    android:background="@color/bg1"
+    android:padding="0dp">
 
-    <EditText
-        android:id="@+id/otp"
-        android:layout_width="315dp"
-        android:layout_height="69dp"
-        android:ems="10"
-        android:hint="Enter OTP"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
 
-    <Button
-        android:id="@+id/verify"
-        android:layout_width="142dp"
-        android:layout_height="58dp"
-        android:layout_marginBottom="236dp"
-        android:text="Verify"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="50dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                tools:ignore = "ContentDescription"
+                android:src = "@drawable/prof"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:text="PheezeeHome"
+            android:layout_marginTop="7dp"
+            android:textColor="#E8E8E8"
+            android:textSize="23sp"
+            app:fontFamily="@font/poppins"
+            />
+
+        <ImageButton
+            android:id="@+id/book"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_notification"
+            android:background="@color/bg1"
+            android:layout_marginLeft="60dp"
+            />
+
+        <ImageButton
+            android:id="@+id/notification"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_book"
+            android:background="@color/bg1"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning!"
+            android:textColor="#E8E8E8"
+            android:textSize="20sp"
+            app:fontFamily="@font/poppins"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jitender Rate"
+            android:textColor="#FFFF"
+            android:textSize="28sp"
+            app:fontFamily="@font/poppins"
+            android:layout_marginTop="-7dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="95dp"
+        android:background="@drawable/layout_border"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Step 2"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Please enter 6 digit access code to verify"
+            android:textColor="#404040"
+            android:textSize="15.8sp"
+            app:fontFamily="@font/poppins"
+            android:lineSpacingExtra="0dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"/>
+
+        <!-- android:textColorHint="@color/black" -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:hint="Access code"
+            app:errorEnabled="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/verify"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_arrow_foreground"
+            android:background="@drawable/rounded_button"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="I don't have access code."
+            android:textColor="@color/bg1"
+            android:textSize="17sp"
+            app:fontFamily="@font/poppins_medium"
+            android:lineSpacingExtra="0dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_navigation"
+                android:background="@color/bot_nav_color"
+                app:itemBackground="@color/bot_nav_color"
+                app:itemTextColor="@drawable/selector"
+                app:itemIconTint="@drawable/selector"
+                app:menu="@menu/menu_navigation"
+                app:labelVisibilityMode="labeled"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
