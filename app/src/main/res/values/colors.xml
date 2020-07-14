@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="bg1">#062545</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000 </color>
+    <color name="orange">#FD5602 </color>
+    <color name="bot_nav_color">#0069B1 </color>
+    0069B1
+</resources>
