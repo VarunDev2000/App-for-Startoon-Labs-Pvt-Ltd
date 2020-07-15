@@ -98,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/layout_border"
         >
 
@@ -156,6 +156,7 @@
             android:layout_gravity="right"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
             />
 
         <TextView

@@ -98,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/layout_border"
         >
 
@@ -139,7 +139,7 @@
             android:textColor="@color/white"
             android:background="@drawable/send_button"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"/>
+            android:layout_marginTop="50dp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
